@@ -24,8 +24,6 @@ public class EntityMooshroom extends EntityCow {
 	public boolean interact(EntityPlayer par1EntityPlayer) {
 		ItemStack var2 = par1EntityPlayer.inventory.getCurrentItem();
 		if (var2 != null && var2.itemID == Item.bowlEmpty.shiftedIndex && this.getGrowingAge() >= 0) {
-			par1EntityPlayer.inventory.setInventorySlotContents(par1EntityPlayer.inventory.currentItem, new ItemStack(Item.bowlSoup));
-			return true;
 			if (var2.stackSize == 1) {
 				par1EntityPlayer.inventory.setInventorySlotContents(par1EntityPlayer.inventory.currentItem, new ItemStack(Item.bowlSoup));
 				return true;

@@ -1954,7 +1954,7 @@ public abstract class Minecraft implements Runnable {
 			}
 
 			// Spout start
-			if (Item.itemsList[var1] == null) {
+			if (Item.itemsList[var2] == null) {
 				return;
 			}
 			// Spout end

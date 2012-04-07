@@ -2995,9 +2995,9 @@ public class World implements IBlockAccess {
 		}
 	}
 
-	public boolean func_48455_z(int par1, int par2, int par3) {
+	public boolean isBlockHighHumidity(int par1, int par2, int par3) {
 		BiomeGenBase var4 = this.getBiomeGenForCoords(par1, par3);
-		return var4.func_48413_d();
+		return var4.isHighHumidity();
 	}
 
 	public void setItemData(String par1Str, WorldSavedData par2WorldSavedData) {
@@ -3022,7 +3022,7 @@ public class World implements IBlockAccess {
 		}
 	}
 
-	public int getWorldHeight() {
+	public int getHeight() {
 		return 256;
 	}
 

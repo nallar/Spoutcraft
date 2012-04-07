@@ -124,10 +124,10 @@ public class WorldClient extends World {
 	public void releaseEntitySkin(Entity var1) { // Spout protected -> public
 		super.releaseEntitySkin(var1);
 		if (this.entityList.contains(var1)) {
-			if (par1Entity.isEntityAlive()) {
+			if (var1.isEntityAlive()) {
 				this.entitySpawnQueue.add(var1);
 			} else {
-				this.entityList.remove(par1Entity);
+				this.entityList.remove(var1);
 			}
 		}
 	}

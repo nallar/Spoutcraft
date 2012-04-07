@@ -48,14 +48,14 @@ public class NetClientHandler extends NetHandler {
 		this.mc = par1Minecraft;
 		
 		// Spout start
-		InetSocketAddress address = NetworkUtils.resolve(var2, var3);
+		InetSocketAddress address = NetworkUtils.resolve(par2Str, par3);
 		if (address.isUnresolved()) {
 			throw new UnknownHostException(address.getHostName());
 		}
 		this.netManager = new NetworkManager(new Socket(address.getAddress(), address.getPort()), "Client", this);
 		
-		org.spoutcraft.client.gui.error.GuiConnectionLost.lastServerIp = var2;
-		org.spoutcraft.client.gui.error.GuiConnectionLost.lastServerPort = var3;
+		org.spoutcraft.client.gui.error.GuiConnectionLost.lastServerIp = par2Str;
+		org.spoutcraft.client.gui.error.GuiConnectionLost.lastServerPort = par3;
 		//Spout end
 	}
 
