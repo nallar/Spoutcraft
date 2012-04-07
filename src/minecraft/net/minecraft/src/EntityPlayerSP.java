@@ -17,8 +17,8 @@ public class EntityPlayerSP extends EntityPlayer {
 	public MovementInput movementInput;
 	protected Minecraft mc;
 	protected int sprintToggleTimer = 0;
-	public int sprintingTicksLeft = 0;
 	public float renderArmYaw;
+	public int sprintingTicksLeft = 0;
 	public float renderArmPitch;
 	public float prevRenderArmYaw;
 	public float prevRenderArmPitch;
@@ -147,7 +147,7 @@ public class EntityPlayerSP extends EntityPlayer {
 			var1 = this.movementInput.jump;
 			float var2 = 0.8F;
 			boolean var3 = this.movementInput.moveForward >= var2;
-			this.movementInput.func_52013_a();
+			this.movementInput.func_52013_a(this); //Spout - kept parameter
 			if (this.isUsingItem()) {
 				this.movementInput.moveStrafe *= 0.2F;
 				this.movementInput.moveForward *= 0.2F;
