@@ -147,7 +147,7 @@ public class EntityPlayerSP extends EntityPlayer {
 			var1 = this.movementInput.jump;
 			float var2 = 0.8F;
 			boolean var3 = this.movementInput.moveForward >= var2;
-			this.movementInput.updatePlayerMoveState(this);
+			this.movementInput.func_52013_a();
 			if (this.isUsingItem()) {
 				this.movementInput.moveStrafe *= 0.2F;
 				this.movementInput.moveForward *= 0.2F;
@@ -416,11 +416,7 @@ public class EntityPlayerSP extends EntityPlayer {
 
 	public void setSprinting(boolean par1) {
 		super.setSprinting(par1);
-		if (!par1) {
-			this.sprintingTicksLeft = 0;
-		} else {
-			this.sprintingTicksLeft = 600;
-		}
+		this.sprintingTicksLeft = par1?600:0;
 	}
 
 	public void setXPStats(float par1, int par2, int par3) {
